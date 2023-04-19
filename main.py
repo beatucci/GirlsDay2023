@@ -172,7 +172,9 @@ Plot_Grid_Interactive(grid_true = grid_true, grid_interactive = grid_interactive
 # graphic with metric between true and interactive choice
 Plot_Field_Metric(grid_true = grid_true, grid_interactive = grid_interactive)
 
-st.markdown(":white_medium_small_square: Can you find the best value of alpha that minimizes this **metric**?")
+st.header("")
+
+st.subheader("Can you find the value of alpha that minimizes this **metric**? ")
 
 st.latex(r'''\text{Metric} = \sum_{\text{grid}} \Big(\text{Simulation}(\alpha) - \text{Observation}\Big)^2''')
 
@@ -182,7 +184,7 @@ alpha_chosen = st.text_input("Answer:")
 # success or error message
 if (alpha_chosen != "" and float(alpha_chosen) == float(alpha_true)):
     st.success("Congratulations! You found the correct value of alpha!", icon="✅")
-    st.markdown("You have experience a bit of our day-to-day life studying the Large-Scale-Structure of the Universe (i.e., the study of how the structure of our Universe looks like on very large scales). From the observations of galaxies, we can also find several other _cosmological parameters_ besides alpha (also known as $\sigma_8$). All these parameters can help us with some unsolved puzzles in Physics, such as how did the Universe begin, to where it is going to evolve, what is dark matter and dark energy, and even give us hints about the particle physics world, such as the composition of the neutrino particles.")
+    st.caption("You have experience a bit of our day-to-day life studying the Large-Scale-Structure of the Universe (i.e., the study of how the structure of our Universe looks like on very large scales). From the observations of galaxies, we can also find several other _cosmological parameters_ besides alpha (also known as $\sigma_8$). All these parameters can help us with some unsolved puzzles in Physics, such as how did the Universe begin, to where it is going to evolve, what is dark matter and dark energy, and even give us hints about the particle physics world, such as the composition of the neutrino particles.")
 
 elif (alpha_chosen != ""):
     st.error("Almost there... try some more values of alpha! (Tip: you can select a region of the graphic to zoom in)")
