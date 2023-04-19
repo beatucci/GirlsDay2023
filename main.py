@@ -173,10 +173,13 @@ Plot_Grid_Interactive(grid_true = grid_true, grid_interactive = grid_interactive
 Plot_Field_Metric(grid_true = grid_true, grid_interactive = grid_interactive)
 
 st.header("")
+st.header("")
 
 st.subheader("Can you find the value of alpha that minimizes this **metric**? ")
 
+st.text("")
 st.latex(r'''\text{Metric} = \sum_{\text{grid}} \Big(\text{Simulation}(\alpha) - \text{Observation}\Big)^2''')
+st.text("")
 
 # give the best value for alpha
 alpha_chosen = st.text_input("Answer:")
@@ -196,7 +199,7 @@ st.divider()
 col1, col2, col3 = st.columns([2,1,1])
 
 col1.text("")
-col1.markdown("©️ _Beatriz Tucci, Julia Stadler, Fabian Schmidt._")
+col1.markdown("© _Beatriz Tucci, Julia Stadler, Fabian Schmidt._")
 col1.markdown("_Max Planck Institute for Astrophysics._")
 col1.markdown("_Girls Day 2023._")
 
@@ -205,3 +208,7 @@ col2.image('data/MPA_logo.png')
 
 col3.text("")
 col3.image('data/LEFTfield_logo.png')
+
+st.text("")
+st.header("")
+st.caption("The MPI allows users to represent their field of research on a personal home page. Within this home page all terms of these Regulations for Use have to be respected. The user has the full responsibility for the contents of this home page. [Imprint](https://www.mpa-garching.mpg.de/imprint) | [Privacy Policy](https://www.mpa-garching.mpg.de/privacypolicy)")
