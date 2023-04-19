@@ -7,6 +7,7 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
+from scipy.interpolate import RegularGridInterpolator
 
 # set fav icon & page title
 st.set_page_config(page_title="Girls Day 2023", page_icon=":milky_way:", layout="centered")
